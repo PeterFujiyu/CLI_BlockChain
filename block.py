@@ -263,6 +263,7 @@ def select_or_create_blockchain():
 def user_exit(info):
     """
     优雅地退出程序。
+    
     :param info: 退出信息。
     """
     print("退出程序")
