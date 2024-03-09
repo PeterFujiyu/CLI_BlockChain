@@ -3,7 +3,8 @@ import time
 import json
 import os
 import pickle
-import tqdm
+
+import sys
 
 class Block:
     def __init__(self, data, index=0, timestamp=None, previous_hash=""):
@@ -150,6 +151,7 @@ class Blockchain:
         """
         重新计算整个区块链的哈希值。
         """
+        import tqdm 
         with tqdm.tqdm(total=len(self.chain) - 1, desc="重新计算区块链哈希进度：") as pbar:
             for i in range(1, len(self.chain)):
                 current_block = self.chain[i]
@@ -264,4 +266,4 @@ def user_exit(info):
     :param info: 退出信息。
     """
     print("退出程序")
-    exit(info)
+    sys.exit(info)
