@@ -216,9 +216,7 @@ def select_blockchain_for_deletion():
     print("\n请选择要删除的区块链编号:")
     for idx, blockchain_name in enumerate(blockchains, start=1):
         print(f"{idx}. {blockchain_name}")
-
     choice = input("输入编号（q退出）: ")
-
     if choice == 'q':
         return
     elif choice.isdigit() and 1 <= int(choice) <= len(blockchains):
