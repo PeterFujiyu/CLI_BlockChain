@@ -30,4 +30,16 @@
 - 若要测试区块链在添加大量随机数据时的性能，运行test.py，并输入要测试的区块数量。
 - 若需测试篡改区块链及验证区块链完整性的功能，请运行test_write.py，按照提示输入相关参数进行测试。
 
+## 打包📦
+- 安装Pyinstaller
+  ```bash
+  python -m pip install pyinstaller
+  ```
+- 打包
+  ```bash
+  python -m pyinstaller -F main.py
+  ```
+- 使用
+  在dist中有最终的程序
+  
 总之，这个项目提供了一个简单的区块链实现框架，并且带有基本的增删查改、性能测试以及数据篡改与校验功能。
